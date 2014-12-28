@@ -586,8 +586,8 @@ Stylesheet: Theme Stylesheet - REMOVE THIS FILE BEFORE GOING TO PRODUCTION
   width: 80px;
   width: 5rem;
   height: auto;
-  border-bottom: 3px solid #a31b13;
-  border-bottom: 0.1875rem solid #a31b13;
+  border-bottom: 3px solid #3b4c57;
+  border-bottom: 0.1875rem solid #3b4c57;
 }
 
 .main-menu .menu {

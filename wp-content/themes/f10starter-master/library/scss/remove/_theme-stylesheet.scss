@@ -11,7 +11,7 @@ Stylesheet: Theme Stylesheet - REMOVE THIS FILE BEFORE GOING TO PRODUCTION
 	.main-logo{
 		@include rem(width, 5rem);
 		height: auto;
-		@include rem(border-bottom, 3px solid darken($red, 20%));
+		@include rem(border-bottom, 3px solid darken($grey, 10%));
 	}
 }
 
