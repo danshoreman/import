@@ -1,0 +1,185 @@
+/******************************************************************
+Stylesheet: Tablet & Small Desktop Stylesheet
+******************************************************************/
+
+
+/*********************
+GENERAL STYLES
+*********************/
+
+
+/*********************
+LINK STYLES
+*********************/
+
+a {
+	color: $link-color;
+	@include transition(all 0.2s ease-in-out);
+
+	&:hover, &:focus {
+		color: lighten($link-hover, 15%);
+		text-decoration: underline;
+	}
+
+	&:active {
+
+	}
+}
+
+.gen-btn{
+	padding: 1rem 1.5rem;
+	
+	&:hover{
+	}
+}
+
+
+
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.intro-text{
+	padding: 5rem 0;
+}
+
+
+/*********************
+HEADER STYLES
+*********************/
+
+.page-header{
+	padding: 1.5rem 0;
+	text-align: inherit;
+	
+	.main-logo{
+		max-width: 100px;	
+	}
+	
+	.main-menu{
+		text-align: right;
+		
+		#menu-main-menu{
+			padding: 0;
+			margin: 0;
+			height: 100px;
+			line-height: 100px;
+			
+			li{
+				display: inline-block;
+				padding: 0 0 0 5rem;
+				
+				a{
+					
+					&:hover{
+						text-decoration: underline;
+					}	
+				}
+			}
+		}
+	}
+}
+
+
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+#homepage{
+	padding: 2rem 0;
+
+	.carousel{
+		height: 450px;
+		
+		.carousel-intro{
+			text-align: left;
+			width: 40%;
+			float: right;
+			padding-top: 90px;
+			
+			h2{
+				font-size: 3rem;
+				margin: 0 0 0.7rem 0;
+				line-height: 1;
+			}
+			
+			p{
+				margin: 0 0 0.7rem 0;
+				line-height: 1.5;
+				font-size: 1.2rem;
+			}
+		}
+		
+		.offer{
+			display: none;
+		}
+	}
+	
+	.products{
+		margin: 0;
+		
+		li{
+			border-right: 1px solid darken($lgrey, 5%);
+			img{}
+			
+		}
+	}
+	
+	.last-product{
+		.products{
+			
+			li{
+				border-right: none;
+				img{}
+				
+			}
+		}
+	}
+}
+
+
+.related{
+	
+	h2{
+	margin: 0 0 1rem 0;
+	
+	}
+	
+	.products{
+		width: 100%;
+		
+		li.product{
+			width: 24% !important;
+			margin: 0 1% 0 0 !important;
+		}
+	}
+}
+
+
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+
+
+/*********************
+FOOTER STYLES
+*********************/
+
+.page-footer{
+	padding: 2rem 0;
+	
+	p{
+		text-align: left;
+	}
+	
+	.social-links{
+		text-align: right;
+	}
+}
+
+
+

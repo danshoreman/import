@@ -1,0 +1,69 @@
+/******************************************************************
+Stylesheet: Tablet & Small Desktop Stylesheet
+******************************************************************/
+
+
+/*********************
+GENERAL STYLES
+*********************/
+
+
+/*********************
+LINK STYLES
+*********************/
+
+
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+
+
+
+/*********************
+HEADER STYLES
+*********************/
+
+.page-header{
+	
+	
+	.main-menu{
+		text-align: right;
+		
+		#menu-main-menu{
+			padding: 0;
+			margin: 0;
+			height: 100px;
+			line-height: 100px;
+			
+			li{
+				display: inline-block;
+				padding: 0 0 0 1rem;
+				
+				a{
+					
+					&:hover{
+						text-decoration: underline;
+					}	
+				}
+			}
+		}
+	}
+}
+
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+
+
+/*********************
+FOOTER STYLES
+*********************/
+
+
+
+
+
