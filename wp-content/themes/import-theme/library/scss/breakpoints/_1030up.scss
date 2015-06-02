@@ -13,6 +13,28 @@ GENERAL STYLES
 LAYOUT & GRID STYLES
 *********************/
 
+.bxslider{
+	
+	.slide{
+		height: 500px;
+		
+		.slide-content{
+			top: 70px;
+				
+			h2{
+				font-size: 3rem;
+				margin: 0 0 0.7rem 0;
+				line-height: 1;
+			}
+			
+			p{
+				margin: 0 0 0.7rem 0;
+				line-height: 1.5;
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
 
 
 /*********************

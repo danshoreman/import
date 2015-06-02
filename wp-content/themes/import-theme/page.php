@@ -2,7 +2,13 @@
 
 	<div class="row">
 	
-		<div class="small-12 medium-8 columns" role="main">
+	<div class="small-12 medium-4 large-3 columns">
+		
+			<?php get_sidebar(); ?>
+			
+		</div>
+	
+		<div class="small-12 medium-8 large-9 columns" role="main">
 
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -42,12 +48,6 @@
 
 			<?php endif; ?>
 
-		</div>
-
-		<div class="small-12 medium-4 columns">
-		
-			<?php get_sidebar(); ?>
-			
 		</div>
 
 	</div>

@@ -58,28 +58,11 @@ HEADER STYLES
 	}
 	
 	.main-menu{
-		text-align: right;
-		
-		#menu-main-menu{
-			padding: 0;
-			margin: 0;
-			height: 100px;
-			line-height: 100px;
-			
-			li{
-				display: inline-block;
-				padding: 0 0 0 5rem;
-				
-				a{
-					
-					&:hover{
-						text-decoration: underline;
-					}	
-				}
-			}
-		}
+		padding-top: 25px;
 	}
 }
+
+
 
 
 
@@ -128,6 +111,7 @@ NAVIGATION STYLES
 	}
 	
 	.last-product{
+		
 		.products{
 			
 			li{
@@ -157,11 +141,40 @@ NAVIGATION STYLES
 	}
 }
 
-
+.bxslider{
+	
+	.slide{
+		height: 400px;
+		
+		.slide-content{
+			padding: 1.5rem;
+			width: 30%;
+			bottom: inherit;
+			top: 30px;
+			left: 55%;
+				
+			h2{
+				font-size: 1.8rem;
+			}
+			
+			p{
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
 
 /*********************
 SIDEBARS & ASIDES
 *********************/
+
+#main-sidebar{
+	margin-top: 2rem;
+	
+	h2{
+		font-size: 1.3rem;
+	}
+}
 
 
 

@@ -6,6 +6,8 @@ require_once( 'includes/custom-functions.php' );
 // Add theme support woocommerce
 add_theme_support( 'woocommerce' );
 
+add_theme_support( 'widgets' );
+
 
 // Add theme support post thumbnails
 add_theme_support('post-thumbnails');
@@ -22,6 +24,22 @@ add_image_size( 'home-hero', 1200, 450, true );
 add_image_size( 'image', 700, 350, true );
 
 
+// Register our sidebars and widgetized areas.
+function arphabet_widgets_init() {
+
+	register_sidebar( array(
+		'name' => 'Main Sidebar',
+		'id' => 'main-sidebar',
+		'before_widget' => '<div class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2>',
+		'after_title' => '</h2>',
+	) );
+	
+}
+add_action( 'widgets_init', 'arphabet_widgets_init' );
+
+
 
 // Change default excerpt
 function new_excerpt_more( $more ) {
@@ -30,8 +48,8 @@ function new_excerpt_more( $more ) {
 add_filter( 'excerpt_more', 'new_excerpt_more' );
 
 
-add_action('wp', create_function("", "if (is_singular(array('product'))) remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10);") );
-remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
+//add_action('wp', create_function("", "if (is_singular(array('product'))) remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10);") );
+//remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
 
 
 /**

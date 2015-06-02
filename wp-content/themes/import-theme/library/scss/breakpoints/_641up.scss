@@ -18,7 +18,15 @@ LINK STYLES
 LAYOUT & GRID STYLES
 *********************/
 
-
+#outer-wrap{
+	padding: 0 0 2rem 0;
+	
+	#kitpage,
+	.page,
+	#container{
+		padding-top: 2rem;
+	}
+}
 
 
 /*********************
@@ -30,24 +38,94 @@ HEADER STYLES
 	
 	.main-menu{
 		text-align: right;
+		padding-top: 15px;
 		
 		#menu-main-menu{
 			padding: 0;
 			margin: 0;
-			height: 100px;
-			line-height: 100px;
 			
 			li{
 				display: inline-block;
-				padding: 0 0 0 1rem;
 				
 				a{
 					
 					&:hover{
-						text-decoration: underline;
 					}	
 				}
 			}
+		}
+	}
+}
+
+.main-menu ul ul {
+	display: none;
+}
+
+.main-menu ul li:hover > ul {
+	display: block;
+}
+
+.main-menu ul {
+	list-style: none;
+	position: relative;
+	display: inline-table;
+}
+.main-menu ul:after {
+	content: ""; clear: both; display: block;
+}
+
+.main-menu ul li {
+	float: left;
+	text-align: left;
+	display: block !important;
+}
+
+.main-menu ul li.current_page_parent,
+.main-menu ul li.current-menu-item,
+.main-menu ul li:hover {
+	background: #434040;
+}
+
+.main-menu ul li:hover a {
+	color: $white;
+}
+
+.main-menu ul li a {
+	display: block; padding: 15px !important;
+	color: $white; text-decoration: none;
+}
+	
+.main-menu ul ul {
+	background: #434040; padding: 0; margin: 0;
+	position: absolute; top: 100%; z-index: 2;
+}
+.main-menu ul ul li {
+	float: none; 
+	/* border-top: 1px solid lighten($red, 10%); */
+	/* border-bottom: 1px solid darken($red, 10%); */ position: relative;
+}
+
+.main-menu ul ul li a {
+	padding: 0;
+	color: $white !important;
+}
+	
+.main-menu ul ul li a:hover {
+	background: darken(#434040, 10%);
+}
+
+.main-menu ul ul ul {
+	position: absolute; left: 100%; top:0;
+}
+
+
+.bxslider{
+	
+	.slide{
+		height: 300px;
+		
+		.slide-content{
+			padding: 1rem;
 		}
 	}
 }
@@ -56,6 +134,41 @@ HEADER STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
+
+#main-sidebar{
+	margin-top: 2rem;
+	
+	.widget{
+		margin-bottom: 1rem;
+		
+		.product-categories{
+			
+			.cat-item{
+				background: $lgrey;
+				padding: 0.7rem 1rem;
+				width: 100%;
+				margin-bottom: 0.5rem;
+					
+				a{
+					&:hover{
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+	
+	#searchform{
+	
+		#s{
+			width: 70%;
+		}
+		
+		#searchsubmit{
+			width: 30%;
+		}
+	}
+}
 
 
 

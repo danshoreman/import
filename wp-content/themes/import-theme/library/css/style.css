@@ -356,8 +356,7 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"],
-input[type="reset"],
+html input[type="button"], input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -455,10 +454,12 @@ table {
 .clearfix, .cf {
   zoom: 1;
 }
+
 .clearfix:before, .clearfix:after, .cf:before, .cf:after {
   content: "";
   display: table;
 }
+
 .clearfix:after, .cf:after {
   clear: both;
 }
@@ -534,6 +535,7 @@ form label {
   margin-bottom: 8px;
   margin-bottom: 0.5rem;
 }
+
 form input,
 form textarea {
   border: 1px solid #e4e6e8;
@@ -549,6 +551,7 @@ form textarea {
   font-size: 10px;
   font-size: 1rem;
 }
+
 form #submit,
 form #searchsubmit {
   border: 1px solid #f2f3f4;
@@ -568,6 +571,7 @@ form #searchsubmit {
   background: #f2f3f4;
   color: #506675;
 }
+
 form #submit:hover,
 form #searchsubmit:hover {
   background: #e4e6e8;
@@ -614,6 +618,7 @@ img {
   line-height: normal;
   text-decoration: none;
 }
+
 .gen-btn:hover {
   text-decoration: none;
 }
@@ -635,6 +640,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   text-rendering: optimizelegibility;
   margin: 0;
 }
+
 h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
   text-decoration: none;
 }
@@ -672,23 +678,37 @@ HEADER STYLES
   padding: 1rem 0;
   text-align: center;
 }
+
 .page-header .main-logo {
   max-width: 75px;
+  display: inline-block;
 }
+
 .page-header .main-menu #menu-main-menu li {
   font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 900;
   line-height: normal;
 }
+
 .page-header .main-menu #menu-main-menu li a {
   color: #ffffff;
   text-decoration: none;
 }
+
 .page-header .main-menu #menu-main-menu li a:hover {
   text-decoration: none;
 }
+
 .page-header .main-menu #menu-main-menu li.current_page_parent a {
-  border-bottom: 5px solid #ffffff;
+  /* border-bottom: 5px solid $white; */
+}
+
+.page-header .main-menu #menu-main-menu li .sub-menu {
+  margin: 0;
+}
+
+.page-header .main-menu #menu-main-menu li .sub-menu li a {
+  color: #999;
 }
 
 .flag {
@@ -697,17 +717,21 @@ HEADER STYLES
   width: 100%;
   height: 7px;
 }
+
 .flag li {
   width: 33.3333333%;
   height: 7px;
   float: left;
 }
+
 .flag li.green {
   background: #42d033;
 }
+
 .flag li.white {
   background: #ffffff;
 }
+
 .flag li.red {
   background: #df3b3b;
 }
@@ -719,6 +743,7 @@ NAVIGATION STYLES
   padding: 1rem 0;
   text-align: center;
 }
+
 #homepage .carousel {
   width: 100%;
   height: 200px;
@@ -729,55 +754,270 @@ NAVIGATION STYLES
   background-position: center center;
   background-repeat: no-repeat;
 }
+
 #homepage .carousel .carousel-intro {
   text-align: left;
   width: 50%;
   float: right;
   padding-top: 30px;
 }
+
 #homepage .carousel .carousel-intro h2 {
   font-size: 1.2rem;
   color: #ffffff;
   margin: 0 0 0.2rem 0;
 }
+
 #homepage .carousel .carousel-intro p {
   margin: 0 0 0.2rem 0;
   line-height: normal;
 }
+
 #homepage .carousel .offer {
   display: none;
 }
+
 #homepage .products {
   margin: 0;
 }
+
 #homepage .products li {
   margin: 0;
 }
+
 #homepage .products li img {
   margin: 0;
   -webkit-box-shadow: 0 0 0 0;
   -moz-box-shadow: 0 0 0 0;
   box-shadow: 0 0 0 0;
 }
+
 #homepage .products li h3 {
   padding: 0;
   background: #ffffff;
   padding: 5px 10px;
 }
+
 #homepage .products li h3 .count {
   background: transparent;
+}
+
+.bxslider .slide {
+  position: relative;
+  height: 250px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.bxslider .slide .slide-img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.bxslider .slide .slide-content {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  text-align: left;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #7f7f7f;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.bxslider .slide .slide-content h2 {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin: 0 0 0.2rem 0;
+}
+
+.bxslider .slide .slide-content p {
+  margin: 0 0 0.2rem 0;
+  line-height: normal;
+  color: #ffffff;
+}
+
+/*********************
+WOOCOMMERCE
+*********************/
+.products .type-product {
+  border: 1px solid #d8d8d8;
+  text-align: center;
+  padding: 5px !important;
+}
+
+.woocommerce ul.products li.product a span, .woocommerce-page ul.products li.product a span,
+.woocommerce ul.products li.product a span:hover, .woocommerce-page ul.products li.product a span:hover,
+.woocommerce ul.products li.product a, .woocommerce-page ul.products li.product a,
+.woocommerce ul.products li.product a:hover, .woocommerce-page ul.products li.product a:hover,
+.woocommerce ul.products li.product a img, .woocommerce-page ul.products li.product a img,
+.woocommerce ul.products li.product a img:hover, .woocommerce-page ul.products li.product a img:hover {
+  -webkit-box-shadow: 0 0 0 transparent;
+  -moz-box-shadow: 0 0 0 transparent;
+  box-shadow: 0 0 0 transparent;
+}
+
+.woocommerce ul.products li.product a.button, .woocommerce-page ul.products li.product a.button {
+  border: none;
+  padding: 10px 15px;
+  color: #ffffff;
+  font-weight: normal;
+  background-color: #df3b3b;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#df3b3b), to(#df3b3b));
+  background-image: -webkit-linear-gradient(top, #df3b3b, #df3b3b);
+  background-image: -moz-linear-gradient(top, #df3b3b, #df3b3b);
+  background-image: -o-linear-gradient(top, #df3b3b, #df3b3b);
+  background-image: linear-gradient(to bottom, #df3b3b, #df3b3b);
+  -webkit-box-shadow: 0 0 0 transparent;
+  -moz-box-shadow: 0 0 0 transparent;
+  box-shadow: 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.woocommerce ul.products li.product a.button:hover, .woocommerce-page ul.products li.product a.button:hover {
+  background-color: #c72020;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#c72020), to(#c72020));
+  background-image: -webkit-linear-gradient(top, #c72020, #c72020);
+  background-image: -moz-linear-gradient(top, #c72020, #c72020);
+  background-image: -o-linear-gradient(top, #c72020, #c72020);
+  background-image: linear-gradient(to bottom, #c72020, #c72020);
+}
+
+.related:before {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.images .wp-post-image,
+.thumbnails .attachment-shop_thumbnail {
+  border: 1px solid #d8d8d8;
+}
+
+.woocommerce div.product form.cart .button {
+  background: #42d033;
+  padding: 1em 1.2em;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.woocommerce div.product form.cart .button:hover {
+  background: #33a927;
+}
+
+.woocommerce .quantity .qty {
+  padding: 0.8em;
 }
 
 /*********************
 SIDEBARS & ASIDES
 *********************/
+#main-sidebar {
+  margin-top: 1rem;
+}
+
+#main-sidebar h2 {
+  font-size: 1.2rem;
+}
+
+#main-sidebar .widget {
+  margin-bottom: 1rem;
+}
+
+#main-sidebar .widget .product-categories .cat-item {
+  background: #eff4f6;
+  padding: 0.7rem 1rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  border: 1px solid #d8d8d8;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+#main-sidebar .widget .product-categories .cat-item a {
+  display: inline-block;
+  color: #242424;
+}
+
+#main-sidebar .widget .product-categories .cat-item a:hover {
+  text-decoration: none;
+}
+
+#main-sidebar .widget .product-categories .cat-item:hover {
+  background: #df3b3b;
+  color: #ffffff;
+}
+
+#main-sidebar .widget .product-categories .cat-item:hover a {
+  color: #ffffff;
+}
+
+#main-sidebar .woocommerce-product-search label {
+  display: block;
+}
+
+#main-sidebar .woocommerce-product-search .search-field {
+  border: none;
+  width: 64%;
+  border: 1px solid #d8d8d8;
+  padding: 0.7rem 3%;
+  font-size: 15px;
+  float: left;
+  background: #eff4f6;
+  outline: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+#main-sidebar .woocommerce-product-search input[type="submit"] {
+  border: none;
+  width: 29%;
+  border: 1px solid #242424;
+  padding: 0.7rem 0;
+  font-size: 15px;
+  background: #242424;
+  color: #ffffff;
+  text-align: center;
+  outline: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+#main-sidebar .woocommerce-product-search input[type="submit"]:hover {
+  background: #df3b3b;
+  border: 1px solid #df3b3b;
+}
+
+#main-sidebar #searchform {
+  /*
+#s{
+			width: 80%;
+			float: left;
+			padding: 0.7rem;
+		}
+		
+		#searchsubmit{
+			width: 20%;
+			background: $black;
+			color: $white;
+			padding: 0.7rem 0;
+			text-align: center;
+		}
+*/
+}
+
 #outer-wrap {
   padding: 0 0 2rem 0;
-}
-#outer-wrap #kitpage,
-#outer-wrap .page,
-#outer-wrap #container {
-  padding-top: 2rem;
 }
 
 /*********************
@@ -788,20 +1028,24 @@ FOOTER STYLES
   padding: 1rem 0;
   text-align: center;
 }
+
 .page-footer p {
   color: #ffffff;
 }
+
 .page-footer .social-links {
   padding: 0;
   margin: 0;
   text-align: center;
 }
+
 .page-footer .social-links li {
   display: inline-block;
   font-size: 2.2rem;
   margin-right: 1rem;
   text-align: center;
 }
+
 .page-footer .social-links li a {
   color: #ffffff;
   text-decoration: none;
@@ -809,54 +1053,145 @@ FOOTER STYLES
 
 @media only screen and (min-width: 642px) {
   /******************************************************************
-  Stylesheet: Tablet & Small Desktop Stylesheet
-  ******************************************************************/
+Stylesheet: Tablet & Small Desktop Stylesheet
+******************************************************************/
   /*********************
-  GENERAL STYLES
-  *********************/
+GENERAL STYLES
+*********************/
   /*********************
-  LINK STYLES
-  *********************/
+LINK STYLES
+*********************/
   /*********************
-  LAYOUT & GRID STYLES
-  *********************/
+LAYOUT & GRID STYLES
+*********************/
+  #outer-wrap {
+    padding: 0 0 2rem 0;
+  }
+  #outer-wrap #kitpage,
+  #outer-wrap .page,
+  #outer-wrap #container {
+    padding-top: 2rem;
+  }
   /*********************
-  HEADER STYLES
-  *********************/
+HEADER STYLES
+*********************/
   .page-header .main-menu {
     text-align: right;
+    padding-top: 15px;
   }
   .page-header .main-menu #menu-main-menu {
     padding: 0;
     margin: 0;
-    height: 100px;
-    line-height: 100px;
   }
   .page-header .main-menu #menu-main-menu li {
     display: inline-block;
-    padding: 0 0 0 1rem;
   }
-  .page-header .main-menu #menu-main-menu li a:hover {
-    text-decoration: underline;
+  .main-menu ul ul {
+    display: none;
   }
-
+  .main-menu ul li:hover > ul {
+    display: block;
+  }
+  .main-menu ul {
+    list-style: none;
+    position: relative;
+    display: inline-table;
+  }
+  .main-menu ul:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  .main-menu ul li {
+    float: left;
+    text-align: left;
+    display: block !important;
+  }
+  .main-menu ul li.current_page_parent,
+  .main-menu ul li.current-menu-item,
+  .main-menu ul li:hover {
+    background: #434040;
+  }
+  .main-menu ul li:hover a {
+    color: #ffffff;
+  }
+  .main-menu ul li a {
+    display: block;
+    padding: 15px !important;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .main-menu ul ul {
+    background: #434040;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    z-index: 2;
+  }
+  .main-menu ul ul li {
+    float: none;
+    /* border-top: 1px solid lighten($red, 10%); */
+    /* border-bottom: 1px solid darken($red, 10%); */
+    position: relative;
+  }
+  .main-menu ul ul li a {
+    padding: 0;
+    color: #ffffff !important;
+  }
+  .main-menu ul ul li a:hover {
+    background: #292727;
+  }
+  .main-menu ul ul ul {
+    position: absolute;
+    left: 100%;
+    top: 0;
+  }
+  .bxslider .slide {
+    height: 300px;
+  }
+  .bxslider .slide .slide-content {
+    padding: 1rem;
+  }
   /*********************
-  SIDEBARS & ASIDES
-  *********************/
+SIDEBARS & ASIDES
+*********************/
+  #main-sidebar {
+    margin-top: 2rem;
+  }
+  #main-sidebar .widget {
+    margin-bottom: 1rem;
+  }
+  #main-sidebar .widget .product-categories .cat-item {
+    background: #eff4f6;
+    padding: 0.7rem 1rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  #main-sidebar .widget .product-categories .cat-item a:hover {
+    text-decoration: none;
+  }
+  #main-sidebar #searchform #s {
+    width: 70%;
+  }
+  #main-sidebar #searchform #searchsubmit {
+    width: 30%;
+  }
   /*********************
-  FOOTER STYLES
-  *********************/
+FOOTER STYLES
+*********************/
 }
+
 @media only screen and (min-width: 768px) {
   /******************************************************************
-  Stylesheet: Tablet & Small Desktop Stylesheet
-  ******************************************************************/
+Stylesheet: Tablet & Small Desktop Stylesheet
+******************************************************************/
   /*********************
-  GENERAL STYLES
-  *********************/
+GENERAL STYLES
+*********************/
   /*********************
-  LINK STYLES
-  *********************/
+LINK STYLES
+*********************/
   a {
     color: #242424;
     -webkit-transition: all 0.2s ease-in-out;
@@ -866,21 +1201,18 @@ FOOTER STYLES
     color: #313131;
     text-decoration: underline;
   }
-
   .gen-btn {
     padding: 1rem 1.5rem;
   }
-
   /*********************
-  LAYOUT & GRID STYLES
-  *********************/
+LAYOUT & GRID STYLES
+*********************/
   .intro-text {
     padding: 5rem 0;
   }
-
   /*********************
-  HEADER STYLES
-  *********************/
+HEADER STYLES
+*********************/
   .page-header {
     padding: 1.5rem 0;
     text-align: inherit;
@@ -889,25 +1221,11 @@ FOOTER STYLES
     max-width: 100px;
   }
   .page-header .main-menu {
-    text-align: right;
+    padding-top: 25px;
   }
-  .page-header .main-menu #menu-main-menu {
-    padding: 0;
-    margin: 0;
-    height: 100px;
-    line-height: 100px;
-  }
-  .page-header .main-menu #menu-main-menu li {
-    display: inline-block;
-    padding: 0 0 0 5rem;
-  }
-  .page-header .main-menu #menu-main-menu li a:hover {
-    text-decoration: underline;
-  }
-
   /*********************
-  NAVIGATION STYLES
-  *********************/
+NAVIGATION STYLES
+*********************/
   #homepage {
     padding: 2rem 0;
   }
@@ -942,7 +1260,6 @@ FOOTER STYLES
   #homepage .last-product .products li {
     border-right: none;
   }
-
   .related h2 {
     margin: 0 0 1rem 0;
   }
@@ -953,13 +1270,34 @@ FOOTER STYLES
     width: 24% !important;
     margin: 0 1% 0 0 !important;
   }
-
+  .bxslider .slide {
+    height: 400px;
+  }
+  .bxslider .slide .slide-content {
+    padding: 1.5rem;
+    width: 30%;
+    bottom: inherit;
+    top: 30px;
+    left: 55%;
+  }
+  .bxslider .slide .slide-content h2 {
+    font-size: 1.8rem;
+  }
+  .bxslider .slide .slide-content p {
+    font-size: 1.2rem;
+  }
   /*********************
-  SIDEBARS & ASIDES
-  *********************/
+SIDEBARS & ASIDES
+*********************/
+  #main-sidebar {
+    margin-top: 2rem;
+  }
+  #main-sidebar h2 {
+    font-size: 1.3rem;
+  }
   /*********************
-  FOOTER STYLES
-  *********************/
+FOOTER STYLES
+*********************/
   .page-footer {
     padding: 2rem 0;
   }
@@ -970,90 +1308,51 @@ FOOTER STYLES
     text-align: right;
   }
 }
+
 @media only screen and (min-width: 1030px) {
   /******************************************************************
-  Stylesheet: Desktop Stylsheet
-  ******************************************************************/
+Stylesheet: Desktop Stylsheet
+******************************************************************/
   /*********************
-  GENERAL STYLES
-  *********************/
+GENERAL STYLES
+*********************/
   /*********************
-  LAYOUT & GRID STYLES
-  *********************/
-  /*********************
-  HEADER STYLES
-  *********************/
-  /*********************
-  NAVIGATION STYLES
-  *********************/
-  /*********************
-  SIDEBARS & ASIDES
-  *********************/
-  /*********************
-  FOOTER STYLES
-  *********************/
-}
-@media only screen and (min-width: 1240px) {
-  /******************************************************************
-  Stylesheet: Super Large Monitor Stylesheet
-  ******************************************************************/
-  /*********************
-  GENERAL STYLES
-  *********************/
-  /*********************
-  LAYOUT & GRID STYLES
-  *********************/
-  /*********************
-  HEADER STYLES
-  *********************/
-  /*********************
-  NAVIGATION STYLES
-  *********************/
-  /*********************
-  SIDEBARS & ASIDES
-  *********************/
-  /*********************
-  FOOTER STYLES
-  *********************/
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  /******************************************************************
-  Stylesheet: Retina Screens & Devices Stylesheet
-  ******************************************************************/
-  /* 
-  
-  EXAMPLE 
-  Let's say you have an image and you need to make sure it looks ok
-  on retina screens. Let's say we have an icon which dimension are
-  24px x 24px. In your regular stylesheets, it would look something
-  like this:
-  
-  .icon {
-  	width: 24px;
-  	height: 24px;
-  	background: url(img/test.png) no-repeat;
+LAYOUT & GRID STYLES
+*********************/
+  .bxslider .slide {
+    height: 500px;
   }
-  
-  For retina screens, we have to make some adjustments, so that image
-  doesn't look blurry. So, taking into account the image above and the
-  dimensions, this is what we would put in our retina stylesheet:
-  
-  .icon {
-  	background: url(img/test@2x.png) no-repeat;
-  	background-size: 24px 24px;
+  .bxslider .slide .slide-content {
+    top: 70px;
   }
-  
-  So, you would create the same icon, but at double the resolution, meaning 
-  it would be 48px x 48px. You'd name it the same, but with a @2x at the end
-  (this is pretty standard practice). Set the background image so it matches
-  the original dimensions and you are good to go. 
-  
-  */
+  .bxslider .slide .slide-content h2 {
+    font-size: 3rem;
+    margin: 0 0 0.7rem 0;
+    line-height: 1;
+  }
+  .bxslider .slide .slide-content p {
+    margin: 0 0 0.7rem 0;
+    line-height: 1.5;
+    font-size: 1.2rem;
+  }
+  /*********************
+HEADER STYLES
+*********************/
+  /*********************
+NAVIGATION STYLES
+*********************/
+  /*********************
+SIDEBARS & ASIDES
+*********************/
+  /*********************
+FOOTER STYLES
+*********************/
 }
+
 @media print {
   /******************************************************************
-  Stylesheet: Print Stylesheet
-  ******************************************************************/
+Stylesheet: Print Stylesheet
+******************************************************************/
   * {
     background: transparent !important;
     color: black !important;
@@ -1061,7 +1360,6 @@ FOOTER STYLES
     filter: none !important;
     -ms-filter: none !important;
   }
-
   a, a:visited {
     color: #444 !important;
     text-decoration: underline;
@@ -1072,30 +1370,24 @@ FOOTER STYLES
   a abbr[title]:after, a:visited abbr[title]:after {
     content: " (" attr(title) ")";
   }
-
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
-
   pre, blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
-
   thead {
     display: table-header-group;
   }
-
   tr, img {
     page-break-inside: avoid;
   }
-
   img {
     max-width: 100% !important;
   }
-
   @page {
     margin: 0.5cm;
   }
@@ -1103,12 +1395,10 @@ FOOTER STYLES
     orphans: 3;
     widows: 3;
   }
-
   h2,
   h3 {
     page-break-after: avoid;
   }
-
   .sidebar,
   .page-navigation,
   .wp-prev-next,

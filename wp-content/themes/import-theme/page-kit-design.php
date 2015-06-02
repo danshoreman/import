@@ -11,7 +11,7 @@ Template Name: Home
 			<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'home-hero' );?>
 			<div id="kitpage">
 				<div class="carousel">
-					<img src="<?php echo $thumb['0'];?>" alt="" class="">
+					<img src="<?php //echo $thumb['0'];?><?php echo get_stylesheet_directory_uri(); ?>/library/images/heritage/heritage.jpg" alt="" class="">
 				</div>
 				<div class="row">
 					<div class="small-12 medium-8 medium-offset-2 columns intro-text">

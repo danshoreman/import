@@ -104,6 +104,7 @@ HEADER STYLES
 	
 	.main-logo{
 		max-width: 75px;	
+		display: inline-block;
 	}
 	
 	.main-menu{
@@ -125,7 +126,18 @@ HEADER STYLES
 				&.current_page_parent{
 					
 					a{
-						border-bottom: 5px solid $white;
+						/* border-bottom: 5px solid $white; */
+					}
+				}
+				
+				.sub-menu{
+					margin: 0;
+					
+					li{
+						
+						a{
+							color: #999;
+						}
 					}
 				}
 			}
@@ -218,11 +230,226 @@ NAVIGATION STYLES
 	}
 }
 
+.bxslider{
+	
+	.slide{
+		position: relative;
+		height: 250px;
+		@include back-size(cover);
+		
+		.slide-img{
+			position: relative;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: auto;
+		}
+		
+		.slide-content{
+			position: absolute;
+			bottom: 20px;
+			left: 0;
+			text-align: left;
+			width: 100%;
+			padding: 0.5rem;
+			@include alpha-background-color(rgba(black, 0.5), white);
+			
+			h2{
+				font-size: 1.2rem;
+				color: $white;
+				margin: 0 0 0.2rem 0;
+			}
+			
+			p{
+				margin: 0 0 0.2rem 0;
+				line-height: normal;
+				color: $white;
+			}
+		}
+	}
+}
+
+
+/*********************
+WOOCOMMERCE
+*********************/
+
+.woocommerce{
+	
+}
+
+.products{
+	
+	.type-product{
+		border: 1px solid #d8d8d8;
+		text-align: center;
+		//background: #eaeaea;
+		padding: 5px !important;
+		
+		a{
+			img{
+				
+			}
+		}
+	}
+}
+
+
+.woocommerce ul.products li.product a span, .woocommerce-page ul.products li.product a span,
+.woocommerce ul.products li.product a span:hover, .woocommerce-page ul.products li.product a span:hover,
+.woocommerce ul.products li.product a, .woocommerce-page ul.products li.product a,
+.woocommerce ul.products li.product a:hover, .woocommerce-page ul.products li.product a:hover,
+.woocommerce ul.products li.product a img, .woocommerce-page ul.products li.product a img,
+.woocommerce ul.products li.product a img:hover, .woocommerce-page ul.products li.product a img:hover{
+	@include box-shadow(0, 0, 0, transparent);
+}
+
+.woocommerce ul.products li.product a.button, .woocommerce-page ul.products li.product a.button{
+	border: none;
+	padding: 10px 15px;
+	color: $white;
+	font-weight: normal;
+	@include css-gradient($red, $red);
+	@include box-shadow(0, 0, 0, transparent);
+	@include transition(all 0.2s ease-in-out);
+	
+	&:hover{
+		@include css-gradient(darken($red, 10%), darken($red, 10%));
+	}
+}
+
+.related{
+
+	&:before{
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+.images .wp-post-image,
+.thumbnails .attachment-shop_thumbnail{
+	border: 1px solid #d8d8d8;	
+}
+
+.woocommerce div.product form.cart .button{
+	background: $green;
+	padding: 1em 1.2em;
+	@include transition(all 0.2s ease-in-out);
+	
+	&:hover{
+		background: darken($green, 10%);
+	}
+}
+
+.woocommerce .quantity .qty{
+	padding: 0.8em;
+}
+
 
 
 /*********************
 SIDEBARS & ASIDES
 *********************/
+
+#main-sidebar{
+	margin-top: 1rem;
+	
+	h2{
+		font-size: 1.2rem;
+	}
+	
+	.widget{
+		margin-bottom: 1rem;
+		
+		.product-categories{
+			
+			.cat-item{
+				background: $lgrey;
+				padding: 0.7rem 1rem;
+				width: 100%;
+				margin-bottom: 0.5rem;
+				border: 1px solid #d8d8d8;
+				@include transition(all 0.2s ease-in-out);
+					
+				a{
+					display: inline-block;
+					color: $black;
+					
+					&:hover{
+						text-decoration: none;
+					}
+				}
+				
+				&:hover{
+					background: $red;
+					color: $white;
+					
+					a{
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+	
+	.woocommerce-product-search{
+	
+		label{
+			display: block;
+		}
+		
+		.search-field{
+			border: none;
+			width: 64%;
+			border: 1px solid #d8d8d8;
+			padding: 0.7rem 3%;
+			font-size: 15px;
+			float: left;
+			background: $lgrey;
+			outline: none;
+			@include border-radius(0);
+		}
+		
+		input[type="submit"]{
+			border: none;
+			width: 29%;
+			border: 1px solid $black;
+			padding: 0.7rem 0;
+			font-size: 15px;
+			background: $black;
+			color: $white;
+			text-align: center;
+			outline: none;
+			@include transition(all 0.2s ease-in-out);
+			@include border-radius(0);
+			
+			&:hover{
+				background: $red;
+				border: 1px solid $red;
+			}
+		}
+	}
+	
+	#searchform{
+	
+		/*
+#s{
+			width: 80%;
+			float: left;
+			padding: 0.7rem;
+		}
+		
+		#searchsubmit{
+			width: 20%;
+			background: $black;
+			color: $white;
+			padding: 0.7rem 0;
+			text-align: center;
+		}
+*/
+	}
+}
 
 #outer-wrap{
 	padding: 0 0 2rem 0;
@@ -230,7 +457,7 @@ SIDEBARS & ASIDES
 	#kitpage,
 	.page,
 	#container{
-	padding-top: 2rem;
+		// padding-top: 2rem;
 	}
 }
 
