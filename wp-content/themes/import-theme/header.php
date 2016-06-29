@@ -25,6 +25,18 @@
 
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.2.js"></script>
+   <script>
+      document.createElement('header');
+      document.createElement('nav');
+      document.createElement('section');
+      document.createElement('article');
+      document.createElement('aside');
+      document.createElement('footer');
+   </script>
+<![endif]-->
+
 <?php wp_head(); ?>
 
 <script src="//use.typekit.net/txo1lob.js"></script>
@@ -34,13 +46,15 @@
 <body <?php body_class(); ?>>
 	
 <header class="page-header">
+<div id="toggle">Menu<span></span></div>
   <div class="row">
 		<div class="small-12 medium-2 columns">
-			<a href="<?php echo home_url(); ?>" rel="nofollow">
+			<a href="<?php echo home_url(); ?>" rel="nofollow" class="logo-link">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/general/creazzo-logo.png" class="main-logo" alt="">
 			</a>
 		</div>
 		<div class="small-12 medium-10 columns">
+			
 			<?php wp_nav_menu( array( 'menu' => 'Main Menu', 'container_class' => 'main-menu' ) ); ?>
 		</div>
   </div>

@@ -45,17 +45,25 @@ Template Name: Home
 						<?php the_content(); ?>
 					</div>
 				</div>
-				<div class="row">
+				<!--
+<div class="row">
 					<div class="small-12 medium-4 columns">
-						<?php echo do_shortcode ('[product_categories ids="9" columns="1"]') ?>
+						<?php /*echo do_shortcode ('[product_categories ids="9" columns="1"]')*/ ?>
 					</div>
 					<div class="small-12 medium-4 columns">
-						<?php echo do_shortcode ('[product_categories ids="12" columns="1"]') ?>
+						<?php /*echo do_shortcode ('[product_categories ids="12" columns="1"]')*/ ?>
 					</div>
 					<div class="small-12 medium-4 columns last-product">
-						<?php echo do_shortcode ('[product_categories ids="21" columns="1"]') ?>
+						<?php /*echo do_shortcode ('[product_categories ids="21" columns="1"]')*/ ?>
 					</div>
 				</div>
+-->
+				<ul class="bxslider2">
+					<li><?php echo do_shortcode ('[product_categories ids="9" columns="1"]') ?></li>
+					<li><?php echo do_shortcode ('[product_categories ids="12" columns="1"]') ?></li>
+					<li><?php echo do_shortcode ('[product_categories ids="21" columns="1"]') ?></li>
+					<li><?php echo do_shortcode ('[product_categories ids="22" columns="1"]') ?></li>
+				</ul>
 			</div>
 	
 	<?php endwhile; ?>

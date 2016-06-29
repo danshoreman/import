@@ -29,8 +29,12 @@ function scripts_and_styles() {
 		wp_register_style( 'fontstyle', get_stylesheet_directory_uri() . '/library/css/font-style.css', array(), '', 'all' );
 		wp_enqueue_style( 'fontstyle' );
 		
+		// register rem support script
+		wp_register_script( 'rem', get_stylesheet_directory_uri() . '/library/js/libs/rem.min.js', array(), null, false );
+		wp_enqueue_script( 'rem' );
 		
-		//register styles for our theme
+		
+		// register styles for our theme
 		wp_register_style( 'respgrid', get_template_directory_uri() . '/library/css/foundation.css', array(), 'all' );
 		wp_enqueue_style( 'respgrid' );
 		
@@ -38,7 +42,7 @@ function scripts_and_styles() {
 		wp_register_style( 'stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
 		wp_enqueue_style( 'stylesheet' );
 		
-		//register all scripts
+		// register all scripts
 		wp_register_script( 'allscripts', get_stylesheet_directory_uri() . '/library/js/scripts.js', array(), null, true );
 		wp_enqueue_script( 'allscripts' );
 		
@@ -65,6 +69,17 @@ function woo_archive_custom_cart_button_text() {
  
         return __( 'View', 'woocommerce' );
  
+}
+
+
+remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
+
+add_action( 'woocommerce_after_shop_loop_item', 'my_woocommerce_template_loop_add_to_cart', 10 );
+
+function my_woocommerce_template_loop_add_to_cart() {
+    echo '
+            <a href="' . get_permalink() . '" class="button add_to_cart_button product_type_simple">View</a>
+          ';
 }
 
 

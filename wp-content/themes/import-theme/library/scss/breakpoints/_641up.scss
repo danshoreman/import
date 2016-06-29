@@ -144,12 +144,12 @@ SIDEBARS & ASIDES
 		.product-categories{
 			
 			.cat-item{
-				background: $lgrey;
-				padding: 0.7rem 1rem;
 				width: 100%;
 				margin-bottom: 0.5rem;
 					
 				a{
+				background: $lgrey;
+				padding: 0.7rem 1rem;
 					&:hover{
 						text-decoration: none;
 					}

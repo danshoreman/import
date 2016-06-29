@@ -624,7 +624,7 @@ img {
 }
 
 .intro-text {
-  padding: 3rem 0 0 0;
+  padding: 3rem 1rem 0 1rem;
 }
 
 /*********************
@@ -676,12 +676,69 @@ HEADER STYLES
 .page-header {
   background: #242424;
   padding: 1rem 0;
-  text-align: center;
+  text-align: left;
+  position: relative;
 }
 
-.page-header .main-logo {
+.page-header .logo-link {
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.page-header .logo-link .main-logo {
   max-width: 75px;
   display: inline-block;
+}
+
+.page-header #toggle {
+  display: block;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 1rem;
+  color: #ffffff;
+  position: absolute;
+  right: 35px;
+  top: 30px;
+  text-indent: -9999px;
+  z-index: 100000;
+}
+
+.page-header #toggle span:after,
+.page-header #toggle span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -9px;
+}
+
+.page-header #toggle span:after {
+  top: 9px;
+}
+
+.page-header #toggle span {
+  position: absolute;
+  display: block;
+  top: 23px;
+  left: 10px;
+}
+
+.page-header #toggle span,
+.page-header #toggle span:after,
+.page-header #toggle span:before {
+  width: 30px;
+  height: 5px;
+  background-color: #ffffff;
+  backface-visibility: hidden;
+}
+
+.page-header .main-menu {
+  display: none;
+}
+
+.page-header .main-menu #menu-main-menu {
+  text-align: center;
 }
 
 .page-header .main-menu #menu-main-menu li {
@@ -693,6 +750,9 @@ HEADER STYLES
 .page-header .main-menu #menu-main-menu li a {
   color: #ffffff;
   text-decoration: none;
+  border-bottom: 1px solid #4a4a4a;
+  display: block;
+  padding: 0.5rem 0;
 }
 
 .page-header .main-menu #menu-main-menu li a:hover {
@@ -783,6 +843,7 @@ NAVIGATION STYLES
 
 #homepage .products li {
   margin: 0;
+  padding-bottom: 30px;
 }
 
 #homepage .products li img {
@@ -796,19 +857,21 @@ NAVIGATION STYLES
   padding: 0;
   background: #ffffff;
   padding: 5px 10px;
+  color: #242424;
 }
 
 #homepage .products li h3 .count {
-  background: transparent;
+  display: none;
 }
 
 .bxslider .slide {
   position: relative;
-  height: 250px;
+  height: 300px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-position: right top;
 }
 
 .bxslider .slide .slide-img {
@@ -821,7 +884,7 @@ NAVIGATION STYLES
 
 .bxslider .slide .slide-content {
   position: absolute;
-  bottom: 20px;
+  bottom: 15px;
   left: 0;
   text-align: left;
   width: 100%;
@@ -845,10 +908,35 @@ NAVIGATION STYLES
 /*********************
 WOOCOMMERCE
 *********************/
+.woocommerce .woocommerce-breadcrumb {
+  margin-top: 1em;
+}
+
+.woocommerce .entry-summary .product_title {
+  font-size: 20px;
+}
+
+.woocommerce .related {
+  margin-top: 2rem;
+}
+
+.woocommerce .related h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.woocommerce div.product div.images, .woocommerce div.product div.summary {
+  margin-bottom: 0;
+}
+
 .products .type-product {
   border: 1px solid #d8d8d8;
   text-align: center;
   padding: 5px !important;
+}
+
+.products .type-product a h3 {
+  color: #242424;
 }
 
 .woocommerce ul.products li.product a span, .woocommerce-page ul.products li.product a span,
@@ -867,12 +955,12 @@ WOOCOMMERCE
   padding: 10px 15px;
   color: #ffffff;
   font-weight: normal;
-  background-color: #df3b3b;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#df3b3b), to(#df3b3b));
-  background-image: -webkit-linear-gradient(top, #df3b3b, #df3b3b);
-  background-image: -moz-linear-gradient(top, #df3b3b, #df3b3b);
-  background-image: -o-linear-gradient(top, #df3b3b, #df3b3b);
-  background-image: linear-gradient(to bottom, #df3b3b, #df3b3b);
+  background-color: #42d033;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#42d033), to(#42d033));
+  background-image: -webkit-linear-gradient(top, #42d033, #42d033);
+  background-image: -moz-linear-gradient(top, #42d033, #42d033);
+  background-image: -o-linear-gradient(top, #42d033, #42d033);
+  background-image: linear-gradient(to bottom, #42d033, #42d033);
   -webkit-box-shadow: 0 0 0 transparent;
   -moz-box-shadow: 0 0 0 transparent;
   box-shadow: 0 0 0 transparent;
@@ -881,12 +969,12 @@ WOOCOMMERCE
 }
 
 .woocommerce ul.products li.product a.button:hover, .woocommerce-page ul.products li.product a.button:hover {
-  background-color: #c72020;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#c72020), to(#c72020));
-  background-image: -webkit-linear-gradient(top, #c72020, #c72020);
-  background-image: -moz-linear-gradient(top, #c72020, #c72020);
-  background-image: -o-linear-gradient(top, #c72020, #c72020);
-  background-image: linear-gradient(to bottom, #c72020, #c72020);
+  background-color: #33a927;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#33a927), to(#33a927));
+  background-image: -webkit-linear-gradient(top, #33a927, #33a927);
+  background-image: -moz-linear-gradient(top, #33a927, #33a927);
+  background-image: -o-linear-gradient(top, #33a927, #33a927);
+  background-image: linear-gradient(to bottom, #33a927, #33a927);
 }
 
 .related:before {
@@ -916,6 +1004,32 @@ WOOCOMMERCE
 }
 
 /*********************
+NEWS STYLES
+*********************/
+.newsWrap {
+  margin-top: 0;
+}
+
+.newsWrap h2 {
+  margin-bottom: 1rem;
+}
+
+.newsWrap .post {
+  border-top: 1px solid #c2c2c2;
+  padding-top: 1rem;
+}
+
+.newsWrap .post .article-header h3 {
+  margin-bottom: 1rem;
+}
+
+.newsWrap .post .entry-content .postThumbnail {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/*********************
 SIDEBARS & ASIDES
 *********************/
 #main-sidebar {
@@ -931,31 +1045,57 @@ SIDEBARS & ASIDES
 }
 
 #main-sidebar .widget .product-categories .cat-item {
-  background: #eff4f6;
-  padding: 0.7rem 1rem;
   width: 100%;
-  margin-bottom: 0.5rem;
-  border: 1px solid #d8d8d8;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
 #main-sidebar .widget .product-categories .cat-item a {
   display: inline-block;
+  background: #eff4f6;
   color: #242424;
+  padding: 0.7rem 1rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  border: 1px solid #d8d8d8;
 }
 
 #main-sidebar .widget .product-categories .cat-item a:hover {
-  text-decoration: none;
-}
-
-#main-sidebar .widget .product-categories .cat-item:hover {
   background: #df3b3b;
   color: #ffffff;
 }
 
-#main-sidebar .widget .product-categories .cat-item:hover a {
+#main-sidebar .widget .product-categories .cat-item a:hover a {
   color: #ffffff;
+}
+
+#main-sidebar .widget .product-categories .cat-item.cat-parent a {
+  margin: 0;
+  border-bottom: none;
+}
+
+#main-sidebar .widget .product-categories .cat-item .children {
+  margin: 0;
+}
+
+#main-sidebar .widget .product-categories .cat-item .children li a {
+  border-top: 0;
+  padding-left: 1.5rem;
+  background: #dfe9ed;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+#main-sidebar .widget .product-categories .cat-item .children li a:hover {
+  background: #df3b3b;
+  color: #ffffff;
+}
+
+#main-sidebar .widget .product-categories .cat-item .children li a:hover a {
+  color: #ffffff;
+}
+
+#main-sidebar .widget .product-categories .cat-item .count {
+  display: none;
 }
 
 #main-sidebar .woocommerce-product-search label {
@@ -963,6 +1103,7 @@ SIDEBARS & ASIDES
 }
 
 #main-sidebar .woocommerce-product-search .search-field {
+  -webkit-appearance: none;
   border: none;
   width: 64%;
   border: 1px solid #d8d8d8;
@@ -998,26 +1139,72 @@ SIDEBARS & ASIDES
   border: 1px solid #df3b3b;
 }
 
-#main-sidebar #searchform {
-  /*
-#s{
-			width: 80%;
-			float: left;
-			padding: 0.7rem;
-		}
-		
-		#searchsubmit{
-			width: 20%;
-			background: $black;
-			color: $white;
-			padding: 0.7rem 0;
-			text-align: center;
-		}
-*/
-}
-
 #outer-wrap {
   padding: 0 0 2rem 0;
+}
+
+#outer-wrap #kitpage {
+  padding-top: 1em;
+}
+
+#outer-wrap #kitpage .intro-text {
+  padding-top: 1rem;
+}
+
+#outer-wrap #kitpage .intro-text h1 {
+  font-size: 28px;
+  margin-bottom: 1rem;
+}
+
+#outer-wrap #kitpage .intro-text h2 {
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+
+#outer-wrap #kitpage .intro-text h3 {
+  font-size: 16px;
+  margin-bottom: 0.2rem;
+}
+
+#outer-wrap #kitpage .intro-text p {
+  margin: 0 0 1.5rem 0;
+}
+
+#outer-wrap #contactpage .intro-text h1 {
+  font-size: 28px;
+  margin-bottom: 0.5rem;
+}
+
+#outer-wrap #contactpage .intro-text h3 {
+  font-size: 20px;
+  margin: 1rem 0 0.2rem 0;
+}
+
+#outer-wrap #contactpage .intro-text h4 {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+  font-weight: normal;
+  color: #242424;
+}
+
+#outer-wrap #contactpage .intro-text p {
+  margin: 0 0 1rem 0;
+}
+
+#outer-wrap #contactpage .cntctfrm_contact_form {
+  margin-top: 2rem;
+}
+
+#outer-wrap .contact-btn {
+  background: #df3b3b;
+  color: #ffffff;
+  padding: 0.8rem 1.2rem;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#outer-wrap .contact-btn:hover {
+  background: #c72020;
 }
 
 /*********************
@@ -1163,10 +1350,12 @@ SIDEBARS & ASIDES
     margin-bottom: 1rem;
   }
   #main-sidebar .widget .product-categories .cat-item {
-    background: #eff4f6;
-    padding: 0.7rem 1rem;
     width: 100%;
     margin-bottom: 0.5rem;
+  }
+  #main-sidebar .widget .product-categories .cat-item a {
+    background: #eff4f6;
+    padding: 0.7rem 1rem;
   }
   #main-sidebar .widget .product-categories .cat-item a:hover {
     text-decoration: none;
@@ -1210,6 +1399,20 @@ LAYOUT & GRID STYLES
   .intro-text {
     padding: 5rem 0;
   }
+  .newsWrap {
+    margin-top: 2rem;
+  }
+  .newsWrap h2 {
+    margin-bottom: 2rem;
+  }
+  .newsWrap .post {
+    padding-top: 2rem;
+  }
+  .newsWrap .post .entry-content .postThumbnail {
+    width: 175px;
+    float: left;
+    margin-right: 20px;
+  }
   /*********************
 HEADER STYLES
 *********************/
@@ -1217,11 +1420,20 @@ HEADER STYLES
     padding: 1.5rem 0;
     text-align: inherit;
   }
-  .page-header .main-logo {
+  .page-header .logo-link .main-logo {
     max-width: 100px;
   }
+  .page-header #toggle {
+    display: none;
+  }
   .page-header .main-menu {
+    display: block;
+  }
+  .page-header .main-menu #menu-main-menu {
     padding-top: 25px;
+  }
+  .page-header .main-menu #menu-main-menu li a {
+    border-bottom: none;
   }
   /*********************
 NAVIGATION STYLES
@@ -1254,9 +1466,6 @@ NAVIGATION STYLES
   #homepage .products {
     margin: 0;
   }
-  #homepage .products li {
-    border-right: 1px solid #dfe9ed;
-  }
   #homepage .last-product .products li {
     border-right: none;
   }
@@ -1277,14 +1486,47 @@ NAVIGATION STYLES
     padding: 1.5rem;
     width: 30%;
     bottom: inherit;
-    top: 30px;
-    left: 55%;
+    top: 50px;
+    left: 50px;
   }
   .bxslider .slide .slide-content h2 {
     font-size: 1.8rem;
   }
   .bxslider .slide .slide-content p {
     font-size: 1.2rem;
+  }
+  #outer-wrap #kitpage {
+    padding-top: 1em;
+  }
+  #outer-wrap #kitpage .intro-text {
+    padding-top: 1rem;
+  }
+  #outer-wrap #kitpage .intro-text h1 {
+    font-size: 32px;
+    margin: 1rem 0;
+  }
+  #outer-wrap #kitpage .intro-text h2 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+  }
+  #outer-wrap #kitpage .intro-text h3 {
+    font-size: 20px;
+  }
+  #outer-wrap #contactpage .intro-text h1 {
+    font-size: 32px;
+  }
+  #outer-wrap #contactpage .intro-text h3 {
+    font-size: 20px;
+    margin: 1rem 0 0.2rem 0;
+  }
+  #outer-wrap #contactpage .intro-text p {
+    margin: 0 0 1rem 0;
+  }
+  #outer-wrap #contactpage .cntctfrm_contact_form {
+    margin-top: 0;
+  }
+  #outer-wrap .contact-btn {
+    padding: 1rem 1.4rem;
   }
   /*********************
 SIDEBARS & ASIDES
@@ -1324,6 +1566,7 @@ LAYOUT & GRID STYLES
   }
   .bxslider .slide .slide-content {
     top: 70px;
+    left: 70px;
   }
   .bxslider .slide .slide-content h2 {
     font-size: 3rem;

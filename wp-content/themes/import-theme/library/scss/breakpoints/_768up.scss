@@ -36,6 +36,8 @@ a {
 
 
 
+
+
 /*********************
 LAYOUT & GRID STYLES
 *********************/
@@ -44,6 +46,36 @@ LAYOUT & GRID STYLES
 	padding: 5rem 0;
 }
 
+.newsWrap{
+	margin-top: 2rem;
+	
+	h2{
+		margin-bottom: 2rem;
+	}
+	
+	.post{
+		padding-top: 2rem;
+		
+		.article-header{
+			
+			h3{
+				
+				a{
+					
+				}
+			}
+		}
+		
+		.entry-content{
+			
+			.postThumbnail{
+				width: 175px;
+				float: left;
+				margin-right: 20px;
+			}
+		}
+	}
+}
 
 /*********************
 HEADER STYLES
@@ -53,12 +85,29 @@ HEADER STYLES
 	padding: 1.5rem 0;
 	text-align: inherit;
 	
-	.main-logo{
-		max-width: 100px;	
+	.logo-link{
+		
+		.main-logo{
+			max-width: 100px;	
+		}
+	}
+	
+	#toggle{
+		display: none;
 	}
 	
 	.main-menu{
-		padding-top: 25px;
+		display: block;
+		
+		#menu-main-menu{
+			padding-top: 25px;
+			li{
+				
+				a{
+					border-bottom: none;
+				}
+			}
+		}
 	}
 }
 
@@ -104,8 +153,6 @@ NAVIGATION STYLES
 		margin: 0;
 		
 		li{
-			border-right: 1px solid darken($lgrey, 5%);
-			img{}
 			
 		}
 	}
@@ -150,8 +197,8 @@ NAVIGATION STYLES
 			padding: 1.5rem;
 			width: 30%;
 			bottom: inherit;
-			top: 30px;
-			left: 55%;
+			top: 50px;
+			left: 50px;
 				
 			h2{
 				font-size: 1.8rem;
@@ -161,6 +208,61 @@ NAVIGATION STYLES
 				font-size: 1.2rem;
 			}
 		}
+	}
+}
+
+#outer-wrap{
+	
+	#kitpage{
+		padding-top: 1em;
+		
+		.intro-text{
+			padding-top: 1rem;
+			
+			h1{
+				font-size: 32px;
+				margin: 1rem 0;
+			}
+			
+			h2{
+				font-size: 24px;
+				margin-bottom: 1rem;
+			}
+			
+			h3{
+				font-size: 20px;
+			}
+			
+			p{
+			}
+		}
+	}
+	
+	#contactpage{
+		
+		.intro-text{
+			
+			h1{
+				font-size: 32px;
+			}
+			
+			h3{
+				font-size: 20px;
+				margin: 1rem 0 0.2rem 0;
+			}
+			
+			p{
+				margin: 0 0 1rem 0;
+			}
+		}
+		
+		.cntctfrm_contact_form{
+			margin-top: 0;
+		}
+	}
+	
+	.contact-btn{
+		padding: 1rem 1.4rem;
 	}
 }
 

@@ -9,7 +9,7 @@ Template Name: Home
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	
 			<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'home-hero' );?>
-			<div id="heritagepage">
+			<div id="contactpage">
 				<div class="row">
 					<div class="small-12 medium-8 medium-offset-2 large-10 large-offset-1 columns intro-text">
 						

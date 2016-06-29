@@ -1,8 +1,29 @@
-<?php get_header(); ?>
+<?php 
+
+/*
+Template Name: News
+*/
+
+get_header(); ?>
 	
 	<div class="row">
+		<div class="small-12 medium-4 large-3 columns">
+		
+		<?php
+		/**
+		 * woocommerce_sidebar hook
+		 *
+		 * @hooked woocommerce_get_sidebar - 10
+		 */
+		do_action( 'woocommerce_sidebar' );
+		?>
 	
-		<div class="small-12 medium-8 columns" role="main">
+		</div>
+		<div class="small-12 medium-8 large-9 columns">
+		
+		<div class="newsWrap">
+		
+		<h2>News</h2>
 
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -10,11 +31,11 @@
 				
 				<header class="article-header">
 					
-					<h1>
+					<h3>
 						
 						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 					
-					</h1>
+					</h3>
 				
 				</header>
 				
@@ -22,7 +43,7 @@
 					
 					<?php if ( has_post_thumbnail()) : ?>
 						
-						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="postThumbnail">
 						
 							<?php the_post_thumbnail(); ?>
 						
@@ -50,7 +71,7 @@
 				
 				<section class="not-found-content">
 					
-					<p><?php _e( 'Please check what you are looking for.' ); ?></p>
+					<p><?php _e( 'Please check what you are looking for' ); ?></p>
 				
 				</section>
 			
@@ -58,20 +79,10 @@
 			
 			<?php endif; ?>
 			
-			<div class="below-nav">
-				
-				<?php posts_nav_link(' - ', '&laquo; Prev', 'Next &raquo;'); ?>
-			
-			</div>
+		</div>
 		
 		</div>
 		
-		<div class="small-12 medium-4 columns">
-		
-			<?php get_sidebar(); ?>
-			
-		</div>
-
 	</div>
 
 <?php get_footer();

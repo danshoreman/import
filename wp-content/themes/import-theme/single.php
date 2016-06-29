@@ -2,7 +2,21 @@
 	
 	<div class="row">
 	
-		<div class="small-12 medium-8 columns" role="main">
+		<div class="small-12 medium-4 large-3 columns">
+		
+		<?php
+		/**
+		 * woocommerce_sidebar hook
+		 *
+		 * @hooked woocommerce_get_sidebar - 10
+		 */
+		do_action( 'woocommerce_sidebar' );
+		?>
+		
+		</div>
+		<div class="small-12 medium-8 large-9 columns">
+		
+		<div class="newsWrap">
 
 			<?php while (have_posts()) : the_post(); ?>
 			
@@ -32,10 +46,6 @@
 	
 		</div>
 	
-		<div class="small-12 medium-4 columns">
-		
-			<?php get_sidebar(); ?>
-			
 		</div>
 
 	</div>

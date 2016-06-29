@@ -6,22 +6,45 @@ All js stuff below
 (function($) {
 	$(document).ready(function() {
 	
-		// Show and hide main nav on mobile
-		$('.menu-item-has-children').click(function(){
-			$('.sub-menu').slideToggle('fast');
+	// Show and hide main nav on mobile
+		$('#toggle').click(function(){
+			$('.main-menu').slideToggle('fast');
 		});
 		
 		// On window resize reset menu to ensure nav displays
-		var menu = $('.navWrap'); 
+		var menu = $('.main-menu'); 
 		$(window).on('resize', function(){     
 		    if(!$("#toggle").is(":visible") && !menu.is(':visible'))
 		    {
 		      menu.css({'display':''});   
 		    }
 		});
+	
+		// Show and hide main nav on mobile
+		$('.menu-item-has-children').click(function(){
+			$('.sub-menu').slideToggle('fast');
+		});
+		
+		// On window resize reset menu to ensure nav displays
+		var navmenu = $('.navWrap'); 
+		$(window).on('resize', function(){     
+		    if(!$("#toggle").is(":visible") && !navmenu.is(':visible'))
+		    {
+		      navmenu.css({'display':''});   
+		    }
+		});
 		
 		$('.bxslider').bxSlider({
 			mode: 'fade'	
+		});
+		
+		$('.bxslider2').bxSlider({
+			mode: 'horizontal',
+			 slideWidth: 390,
+		    minSlides: 2,
+		    maxSlides: 3,
+		    moveSlides: 1,
+		    pager: false
 		});
 		
 		
