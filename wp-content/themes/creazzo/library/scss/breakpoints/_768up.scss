@@ -84,11 +84,13 @@ HEADER STYLES
 .page-header{
 	padding: 1.5rem 0;
 	text-align: inherit;
+	background: url(../images/general/header-background.png) left top repeat;
+	@include back-size();
 	
 	.logo-link{
 		
 		.main-logo{
-			max-width: 100px;	
+			max-width: 80px;	
 		}
 	}
 	
@@ -100,7 +102,7 @@ HEADER STYLES
 		display: block;
 		
 		#menu-main-menu{
-			padding-top: 25px;
+			padding-top: 10px;
 			li{
 				
 				a{

@@ -53,13 +53,13 @@ All js stuff below
 	
 		var currentTallest = 0,
 		     currentRowStart = 0,
-		     rowDivs = new Array(),
+		     rowDivs = [],
 		     $el,
 		     topPosition = 0;
 		 $(container).each(function() {
 		
 		   $el = $(this);
-		   $($el).height('auto')
+		   $($el).height('auto');
 		   topPostion = $el.position().top;
 		
 		   if (currentRowStart != topPostion) {
@@ -78,7 +78,7 @@ All js stuff below
 		     rowDivs[currentDiv].height(currentTallest);
 		   }
 		 });
-		}
+		};
 		
 		$(window).load(function() {
 		  equalheight('.products .product');
