@@ -84,6 +84,8 @@ wp-content/mu-plugins/mu-plugin.php
 wp-content/mu-plugins/wpengine-common
 wp-content/mysql.sql
 
+wp-content/themes/creazzo/node_modules
+
 # large/disallowed file types
 # a CDN should be used for these
 *.hqx
