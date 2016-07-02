@@ -751,17 +751,13 @@ HEADER STYLES
 .page-header .main-menu #menu-main-menu li a {
   color: #ffffff;
   text-decoration: none;
-  border-bottom: 1px solid #4a4a4a;
+  border-bottom: 1px solid #00193d;
   display: block;
   padding: 0.5rem 0;
 }
 
 .page-header .main-menu #menu-main-menu li a:hover {
   text-decoration: none;
-}
-
-.page-header .main-menu #menu-main-menu li.current_page_parent a {
-  /* border-bottom: 5px solid $white; */
 }
 
 .page-header .main-menu #menu-main-menu li .sub-menu {
@@ -1298,7 +1294,7 @@ HEADER STYLES
   .main-menu ul li.current_page_parent,
   .main-menu ul li.current-menu-item,
   .main-menu ul li:hover {
-    background: #434040;
+    background: #002457;
   }
   .main-menu ul li:hover a {
     color: #ffffff;
@@ -1310,7 +1306,7 @@ HEADER STYLES
     text-decoration: none;
   }
   .main-menu ul ul {
-    background: #434040;
+    background: #002457;
     padding: 0;
     margin: 0;
     position: absolute;
@@ -1328,7 +1324,7 @@ HEADER STYLES
     color: #ffffff !important;
   }
   .main-menu ul ul li a:hover {
-    background: #292727;
+    background: #00193d;
   }
   .main-menu ul ul ul {
     position: absolute;

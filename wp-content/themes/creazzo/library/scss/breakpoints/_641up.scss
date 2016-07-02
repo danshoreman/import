@@ -82,7 +82,7 @@ HEADER STYLES
 .main-menu ul li.current_page_parent,
 .main-menu ul li.current-menu-item,
 .main-menu ul li:hover {
-	background: #434040;
+	background: darken($color--creazzo, 5%);
 }
 
 .main-menu ul li:hover a {
@@ -95,7 +95,7 @@ HEADER STYLES
 }
 	
 .main-menu ul ul {
-	background: #434040; padding: 0; margin: 0;
+	background: darken($color--creazzo, 5%); padding: 0; margin: 0;
 	position: absolute; top: 100%; z-index: 2;
 }
 .main-menu ul ul li {
@@ -110,7 +110,7 @@ HEADER STYLES
 }
 	
 .main-menu ul ul li a:hover {
-	background: darken(#434040, 10%);
+	background: darken($color--creazzo, 10%);
 }
 
 .main-menu ul ul ul {
