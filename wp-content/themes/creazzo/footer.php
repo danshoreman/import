@@ -1,6 +1,8 @@
 			
+<!--
 	</div>
-</div><?php // close 'outer-wrap' ?>
+</div>
+--><?php // close 'outer-wrap' ?>
 <footer class="page-footer" role="contentinfo">
 	<div class="row">
 		<div class="small-12 medium-6 columns">

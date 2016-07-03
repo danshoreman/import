@@ -54,7 +54,6 @@
 			</a>
 		</div>
 		<div class="small-12 medium-10 columns">
-			
 			<?php wp_nav_menu( array( 'menu' => 'Main Menu', 'container_class' => 'main-menu' ) ); ?>
 		</div>
   </div>
@@ -65,7 +64,9 @@
 	<li class="red"></li>
 </ul>
 
+<!--
 <div id="outer-wrap" class="row">
 		<div class="small-12 columns">
+-->
 			
 			
