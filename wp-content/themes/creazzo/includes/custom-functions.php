@@ -91,3 +91,7 @@ function google_fonts() {
 }
 
 add_action('wp_print_styles', 'google_fonts');
+
+
+// Custom Post Type - Gallery
+require_once('class.creazzo.php');
