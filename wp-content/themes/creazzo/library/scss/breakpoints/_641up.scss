@@ -13,6 +13,38 @@ LINK STYLES
 *********************/
 
 
+.promo-panels{
+	
+	.promo-img{
+		
+		.marker{
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 20px 0 20px 20px;
+			border-color: transparent transparent transparent #fff;
+			position: absolute;
+			top: 50%;
+			left: 20px;
+			z-index: 1;
+			margin-top: -20px;
+		}
+	}
+	
+	.even-block{
+		
+		.promo-img{
+		
+			.marker{
+				left: inherit;
+				right: 0;
+				border-width: 20px 20px 20px 0;
+				border-color: transparent #fff transparent transparent ;
+			}
+		}
+	}
+}
+
 
 /*********************
 LAYOUT & GRID STYLES

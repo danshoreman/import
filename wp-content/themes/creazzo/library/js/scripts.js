@@ -35,7 +35,8 @@ All js stuff below
 		});
 		
 		$('.bxslider').bxSlider({
-			mode: 'fade'	
+			mode: 'fade',
+			auto: true
 		});
 		
 		$('.bxslider2').bxSlider({
@@ -82,11 +83,13 @@ All js stuff below
 		
 		$(window).load(function() {
 		  equalheight('.products .product');
+		  equalheight('.promo-panels .promo-block');
 		});
 		
 		
 		$(window).resize(function(){
 		  equalheight('.products .product');
+		  equalheight('.promo-panels .promo-block');
 		});
 	
 	

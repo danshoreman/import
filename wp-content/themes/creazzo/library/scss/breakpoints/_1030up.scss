@@ -8,6 +8,21 @@ GENERAL STYLES
 *********************/
 
 
+.promo-panels{
+	
+	.promo-copy{
+		padding: 0 3.5rem;
+		
+		h3{
+			font-size: 1.4rem;
+		}
+		
+		p{
+			font-size: 1rem;
+		}
+	}
+}
+
 
 /*********************
 LAYOUT & GRID STYLES
@@ -29,9 +44,10 @@ LAYOUT & GRID STYLES
 			}
 			
 			p{
-				argin-bottom: 0.7rem;
+				margin-bottom: 0.7rem;
 				line-height: 1.5;
 				font-size: 1.2rem;
+				max-width: 50%;
 			}
 		}
 	}
