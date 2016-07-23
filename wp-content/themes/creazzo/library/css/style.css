@@ -596,7 +596,7 @@ body {
   line-height: normal;
   color: #161616;
   -webkit-font-smoothing: antialiased;
-  background: #efefe9;
+  background: #eaeef2;
 }
 
 /*********************
@@ -995,6 +995,120 @@ NAVIGATION STYLES
 
 .bxslider .slide .slide-content p a:hover {
   background: #cba81b;
+}
+
+/* Creazzo Custom */
+.customWrap {
+  background: #ffffff;
+  padding: 0.5rem;
+}
+
+.customWrap .customHeader h2 {
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 5px solid #f5f3f3;
+  border-bottom: 0.5rem;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.customWrap .customHeader h2:after {
+  content: '';
+  width: 100px;
+  height: 4px;
+  background: #eeebeb;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -50px;
+}
+
+.customWrap .customImg {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin: auto;
+}
+
+.customWrap .customIntro {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.customWrap .customForm p, .customWrap .customForm ul {
+  border: 3px solid black;
+  margin: 0 0 0.5rem 0;
+  padding: 0.5rem;
+}
+
+.customWrap .customForm .title {
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.customWrap .orderTitle {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+}
+
+.customWrap .customOrderForm_wrapper {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 0;
+}
+
+.customWrap .customOrderForm_wrapper .customOrderForm .gform_fields .gfield {
+  width: 100%;
+}
+
+.customWrap .customOrderForm_wrapper .customOrderForm .gform_fields .gfield label {
+  display: none;
+}
+
+.customWrap .customOrderForm_wrapper .customOrderForm .gform_fields .gfield input {
+  border: 3px solid black;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.customWrap .customOrderForm_wrapper .gform_footer {
+  margin-top: 0;
+}
+
+.customWrap .customOrderForm_wrapper .gform_footer .button {
+  width: 100%;
+  color: #ffffff;
+  border: 0;
+  background: #f13b1d;
+}
+
+.customWrap .customOrderForm_wrapper .gform_footer .button:hover {
+  background: #e62d0e;
+}
+
+.gform_confirmation_wrapper .gform_confirmation_message {
+  text-align: center;
+  padding: 1rem 2rem;
+  border: 1px solid #778384;
+  background: #d8e5e6;
+  border-radius: 3px;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield select {
+  border: 3px solid black;
+  padding: 0.5rem;
+  height: 45px;
+  background: #ffffff;
+  width: 100% !important;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 
 /*********************
@@ -1599,6 +1713,75 @@ NAVIGATION STYLES
   }
   .bxslider .slide .slide-content p {
     font-size: 1.2rem;
+  }
+  /* Creazzo Custom */
+  .customWrap {
+    background: #ffffff;
+    padding: 0.5rem;
+  }
+  .customWrap .customHeader h2 {
+    font-size: 1.8rem;
+    padding: 2rem 0;
+    margin-bottom: 1rem;
+  }
+  .customWrap .customHeader h2:after {
+    width: 150px;
+    height: 5px;
+    margin-left: -75px;
+  }
+  .customWrap .customImg {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: auto;
+  }
+  .customWrap .customIntro {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+  }
+  .customWrap .customForm p, .customWrap .customForm ul {
+    border: 3px solid black;
+    margin: 0 0 0.5rem 0;
+    padding: 0.5rem;
+  }
+  .customWrap .orderTitle {
+    padding: 1rem 0;
+  }
+  .customWrap .customOrderForm_wrapper .customOrderForm .gform_fields .gfield {
+    width: 49%;
+    float: left;
+    clear: none;
+    margin-right: 1%;
+  }
+  .customWrap .customOrderForm_wrapper .customOrderForm .gform_fields .gfield input {
+    border: 3px solid black;
+    padding: 0.7rem;
+  }
+  .customWrap .customOrderForm_wrapper .customOrderForm .gform_fields .gfield:nth-child(2n+2) {
+    margin-right: 0;
+    float: right;
+    margin-left: 1%;
+  }
+  .customWrap .customOrderForm_wrapper .customOrderForm .gform_fields .gfield:nth-child(2n+2):after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .customWrap .customOrderForm_wrapper .gform_footer {
+    margin-top: 0;
+  }
+  .customWrap .customOrderForm_wrapper .gform_footer .button {
+    width: 49%;
+    color: #ffffff;
+    border: 0;
+    background: #f13b1d;
+  }
+  .customWrap .customOrderForm_wrapper .gform_footer .button:hover {
+    background: #e62d0e;
+  }
+  body .gform_wrapper .gform_body .gform_fields .gfield select {
+    height: 49px;
   }
   #outer-wrap #kitpage {
     padding-top: 1em;

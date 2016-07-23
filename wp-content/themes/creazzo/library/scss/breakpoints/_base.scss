@@ -412,6 +412,134 @@ NAVIGATION STYLES
 }
 
 
+/* Creazzo Custom */
+
+.customWrap{
+	background: $white;
+	padding: 0.5rem;
+	
+	.customHeader{
+		
+		h2{
+			text-align: center;
+			text-transform: uppercase;
+			border-bottom: 5px solid #f5f3f3;
+			border-bottom: 0.5rem;
+			font-size: 1.2rem;
+			padding: 1rem 0;
+			position: relative;
+			margin-bottom: 0.5rem;
+			
+			&:after{
+				content: '';
+				width: 100px;
+				height: 4px;
+				background: #eeebeb;
+				position: absolute;
+				left: 50%;
+				bottom: 0;
+				margin-left: -50px;
+			}
+		}
+	}
+	
+	.customImg{
+		width: 100%;
+		max-width: 800px;
+		height: auto;
+		margin: auto;
+	}
+	
+	.customIntro{
+		max-width: 800px;
+		margin: auto;
+		text-align: center;
+		padding: 1rem 0;
+		
+		p{}
+	}
+	
+	.customForm{
+		
+		p, ul{
+			border: 3px solid black;
+			margin: 0 0 0.5rem 0;
+			padding: 0.5rem;
+		}
+		
+		.title{
+			margin-bottom: 0.5rem;
+			display: block;
+		}
+	}
+	
+	.orderTitle{
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 1.2rem;
+		padding: 1rem 0;
+	}
+	
+	.customOrderForm_wrapper{
+		width: 100%;
+		max-width: 100%;
+		margin-top: 0;
+		
+		.customOrderForm{
+			
+			.gform_fields{
+				
+				.gfield{
+					width: 100%;
+					
+					label{
+						display: none;
+					}
+					
+					input{
+						border: 3px solid black;
+						padding: 0.5rem;
+						width: 100%;
+					}
+				}
+			}
+		}
+		
+		.gform_footer{
+			margin-top: 0;
+			
+			.button{
+				width: 100%;
+				color: $white;
+				border: 0;
+				background: #f13b1d;
+				
+				&:hover{
+					background: darken(#f13b1d, 5%);
+				}
+			}
+		}
+	}
+	
+}
+
+.gform_confirmation_wrapper .gform_confirmation_message{
+	text-align: center;
+  padding: 1rem 2rem;
+  border: 1px solid #778384;
+  background: #d8e5e6;
+  border-radius: 3px;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield select {
+	border: 3px solid black;
+	padding: 0.5rem;
+	height: 45px;
+	background: $white;
+	width: 100% !important;
+	@include border-radius(0);
+}
+
 /*********************
 WOOCOMMERCE
 *********************/

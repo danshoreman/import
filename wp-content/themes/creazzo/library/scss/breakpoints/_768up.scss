@@ -209,6 +209,110 @@ NAVIGATION STYLES
 	}
 }
 
+
+/* Creazzo Custom */
+
+.customWrap{
+	background: $white;
+	padding: 0.5rem;
+	
+	.customHeader{
+		
+		h2{
+			font-size: 1.8rem;
+			padding: 2rem 0;
+			margin-bottom: 1rem;
+			
+			&:after{
+				width: 150px;
+				height: 5px;
+				margin-left: -75px;
+			}
+		}
+	}
+	
+	.customImg{
+		width: 100%;
+		max-width: 800px;
+		height: auto;
+		margin: auto;
+	}
+	
+	.customIntro{
+		max-width: 800px;
+		margin: auto;
+		text-align: center;
+		
+		p{}
+	}
+	
+	.customForm{
+		
+		p, ul{
+			border: 3px solid black;
+			margin: 0 0 0.5rem 0;
+			padding: 0.5rem;
+		}
+	}
+	
+	.orderTitle{
+		padding: 1rem 0;
+	}
+	
+	.customOrderForm_wrapper{
+		
+		.customOrderForm{
+			
+			.gform_fields{
+				
+				.gfield{
+					width: 49%;
+					float: left;
+					clear: none;
+					margin-right: 1%;
+					
+					input{
+						border: 3px solid black;
+						padding: 0.7rem;
+					}
+					
+					&:nth-child(2n+2){
+						margin-right: 0;
+						float: right;
+						margin-left: 1%;
+						
+						&:after{
+							content: "";
+							display: table;
+							clear: both;
+						}
+					}
+				}
+			}
+		}
+		
+		.gform_footer{
+			margin-top: 0;
+			
+			.button{
+				width: 49%;
+				color: $white;
+				border: 0;
+				background: #f13b1d;
+				
+				&:hover{
+					background: darken(#f13b1d, 5%);
+				}
+			}
+		}
+	}
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield select {
+	height: 49px;
+}
+
+
 #outer-wrap{
 	
 	#kitpage{

@@ -5,6 +5,7 @@
 	$product_price 	= get_field('product_price');
 	$product_run 		= get_field('product_run_no');
 	$product_info 	= get_field('product_information');
+	$product_size 	= get_field('product_size');
 	
 ?>
 	
@@ -12,32 +13,44 @@
 	
 		<div class="small-12 columns">
 		
-		<div class="productWrap">
+		<div class="customWrap">
 
 			<?php while (have_posts()) : the_post(); ?>
 			
-				<header>
+				<header class="customHeader">
 					
 					<h2><?php the_title(); ?></h2>
 				
 				</header>
-
-				<img src="<?php echo $product_img[0]; ?>" class="" alt="<?php echo get_the_title(get_field('product_image')) ?>">
-				
-				<?php echo $product_copy; ?>
 				
 				<div class="row">
-					<div class="small-12 large-6 columns">
-						<?php echo $product_price; ?>
+					<div class="small-12 large-8 large-offset-2 columns">
+
+					<img src="<?php echo $product_img[0]; ?>" class="creazzoImg" alt="<?php echo get_the_title(get_field('product_image')) ?>">
+					
+					<div class="customIntro"><?php echo $product_copy; ?></div>
+					
+					<div class="row customForm">
+						<div class="small-12 medium-6 columns">
+							<p class="">£<?php echo $product_price; ?></p>
+						</div>
+						<div class="small-12 medium-6 columns">
+							<p class="">Run of <?php echo $product_run; ?></p>
+						</div>
+						<div class="small-12 medium-6 columns">
+							<span class="title">Information</span>
+							<?php echo $product_info; ?>
+						</div>
+						<div class="small-12 medium-6 columns">
+							<span class="title">Sizes Available</span>
+							<?php echo $product_size; ?>
+						</div>
 					</div>
-					<div class="small-12 large-6 columns">
-						<?php echo $product_run; ?>
-					</div>
-					<div class="small-12 large-6 columns">
-						<?php echo $product_info; ?>
-					</div>
-					<div class="small-12 large-6 columns">
-						<?php //echo $product_run; ?>
+				
+					<h3 class="orderTitle">Order</h3>
+					
+					<?php echo do_shortcode('[gravityform id="1" title="false" description="false"]'); ?>
+				
 					</div>
 				</div>
 			
