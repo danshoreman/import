@@ -48,6 +48,7 @@ class Creazzo {
 
     register_post_type( $this->singular, $args );
     
+    
   }
 
 }
